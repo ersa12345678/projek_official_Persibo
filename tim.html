@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad Tim Persibo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-image: url("pemain.png"); /* Gambar latar belakang untuk seluruh halaman */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #f0c040;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        header .logo .club-name {
+            font-family: 'Cursive', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #f0c040;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .team-section {
+            background-color: #ffa6007a; /* Warna oranye untuk latar belakang bagian tim */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .team-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #070707;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .players {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .player-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fefbfb;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33.333% - 40px);
+            margin: 10px;
+        }
+
+        .player-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .player-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .player-card p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #f0c040;
+        }
+
+        .player-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #f0c040;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Club Logo">
+            <span class="club-name">Persibo Bojonegoro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">About</a></li>
+                <li><a href="tim.html">Team</a></li>
+                <li><a href="jadwal.html">Schedule</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="highlight.html">Highlight</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="team" class="team-section">
+            <h2>Tim Persibo Bojonegoro</h2>
+            <div class="players">
+                <div class="player-card">
+                    <img src="player1.png" alt="Player 1">
+                    <h3>Diego Banowo Bagus Sadewo</h3>
+                    <p>Forward</p>
+                </div>
+                <div class="player-card">
+                    <img src="player2.png" alt="Player 2">
+                    <h3>Bayu Nugroho</h3>
+                    <p>Midfielder</p>
+                </div>
+                <div class="player-card">
+                    <img src="player3.png" alt="Player 3">
+                    <h3>Taufiq Hidayat</h3>
+                    <p>Right Winger</p>
+                </div>
+                <div class="player-card">
+                    <img src="player4.png" alt="Player 4">
+                    <h3>Ananda Dhea Bagus Saputra</h3>
+                    <p>Second Striker</p>
+                </div>
+                <div class="player-card">
+                    <img src="player5.png" alt="Player 5">
+                    <h3>Fatah Aji Pratama</h3>
+                    <p>Left Winger</p>
+                </div>
+                <div class="player-card">
+                    <img src="player6.png" alt="Player 6">
+                    <h3>Robi Kris</h3>
+                    <p>Forward</p>
+                </div>
+                <div class="player-card">
+                    <img src="player7.png" alt="Player 7">
+                    <h3>F. Fathoni</h3>
+                    <p>Right Wing Back</p>
+                </div>
+                <div class="player-card">
+                    <img src="player8.png" alt="Player 8">
+                    <h3>Risco Herlambang Budiman</h3>
+                    <p>Left Wing Back</p>
+                </div>
+                <div class="player-card">
+                    <img src="player9.png" alt="Player 9">
+                    <h3>Munhar</h3>
+                    <p>Center Back</p>
+                </div>
+                <div class="player-card">
+                    <img src="player10.png" alt="Player 10">
+                    <h3>Muhammad Yudha Firdanna</h3>
+                    <p>Right Wing Back</p>
+                </div>
+                <div class="player-card">
+                    <img src="player11.png" alt="Player 11">
+                    <h3>Nur Ikhsan</h3>
+                    <p>Goalkeeper</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Persibo Bojonegoro. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://x.com/persibojonegoro">Twitter</a>
+            <a href="https://www.facebook.com/PersiboBojonegoroOfficial/">Facebook</a>
+            <a href="https://www.instagram.com/persibo.bojonegoro/">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>

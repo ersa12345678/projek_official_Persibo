@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - Persibo Bojonegoro </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cursive&display=swap" rel="stylesheet">
+    <style>
+        /* Style CSS tetap sama seperti sebelumnya */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #faf7f7;
+            background-image: url("old.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #f0c040;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            transition: background-color 0.3s;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        header .logo .club-name {
+            font-family: 'Cursive', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #f0c040;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .about-section {
+            background-color: #ffa60093;
+            padding: 40px;
+            position: relative;
+            text-align: center;
+        }
+
+        .about-section::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ffa500;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .about-section .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-section .about-text {
+            margin-bottom: 30px;
+            color: #0a0a0a;
+        }
+
+        .about-section .about-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about-section .about-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-section .about-text ul {
+            text-align: left;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .about-section .about-text ul li {
+            margin-bottom: 10px;
+        }
+
+        .about-section .about-image {
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(224, 155, 7, 0.92);
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-section .about-image img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .about-section .about-image img:hover {
+            transform: scale(1.1);
+        }
+
+        .about-section .about-video {
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-section .about-video iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(224, 155, 7, 0.92);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #f0c040;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #c48807;
+        }
+
+        @media (min-width: 768px) {
+            .about-section .about-text {
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Club Logo">
+            <span class="club-name">Persibo Bojonegoro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">About</a></li>
+                <li><a href="tim.html">Team</a></li>
+                <li><a href="jadwal.html">Schedule</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="highlight.html">Highlight</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Persibo Bojonegoro</h2>
+                    <p>Persibo Bojonegoro adalah klub sepak bola yang berbasis di Bojonegoro, Jawa Timur, Indonesia. Didirikan pada tahun 1951, klub ini telah menjadi bagian integral dari komunitas sepak bola lokal.</p>
+                    <p>Selama sejarahnya, Persibo telah mencatat berbagai prestasi, termasuk menjadi juara Liga Indonesia pada tahun 2003-2004. Meskipun menghadapi berbagai tantangan, Persibo tetap menjadi salah satu klub yang dicintai di Bojonegoro.</p>
+                    <p>Persibo Bojonegoro adalah klub sepak bola yang berbasis di Bojonegoro, Jawa Timur, Indonesia. Klub ini didirikan pada tahun 1951 dan telah menjadi salah satu kekuatan sepak bola di tingkat regional di Indonesia.</p>
+                    <p>Karir tersukses Persibo Bojonegoro terjadi pada dekade terakhir, khususnya pada awal 2000-an. Pada periode tersebut, Persibo meraih beberapa pencapaian penting, antara lain:</p>
+                    <ul>
+                        <li>Juara Liga Indonesia: Persibo berhasil meraih gelar juara Liga Indonesia pada musim 2003-2004. Ini merupakan salah satu prestasi tertinggi klub, menandakan keunggulan mereka di level kompetisi nasional.</li>
+                        <li>Pencapaian di Piala Indonesia: Klub ini juga mencatat beberapa pencapaian di Piala Indonesia, termasuk mencapai babak-babak penting dalam kompetisi ini.</li>
+                        <li>Partisipasi di Kompetisi Asia: Setelah meraih kesuksesan di tingkat nasional, Persibo juga mengikuti beberapa kompetisi di tingkat Asia, meskipun tidak meraih prestasi signifikan di sana.</li>
+                        <li>Pengembangan Pemain Lokal: Sebagai klub regional, Persibo juga dikenal karena peran mereka dalam mengembangkan pemain-pemain lokal yang kemudian menjadi bagian penting dari sepak bola Indonesia secara keseluruhan.</li>
+                    </ul>
+                    <p>Setelah periode kejayaannya pada awal 2000-an, Persibo mengalami beberapa tantangan, termasuk masalah keuangan dan manajemen yang mempengaruhi performa klub secara keseluruhan. Klub ini masih mempunyai basis suporter yang kuat di Bojonegoro dan sekitarnya, meskipun mereka tidak lagi bermain di kompetisi tertinggi seperti Liga 1 Indonesia.</p>
+                    <p>Secara keseluruhan, Persibo Bojonegoro tetap menjadi bagian penting dari sejarah sepak bola Indonesia, dengan pencapaian mereka yang mencerminkan bagaimana klub lokal dapat memainkan peran signifikan dalam pengembangan olahraga di tingkat nasional.</p>
+                </div>
+                <div class="about-image">
+                    <img src="juara.jpg" alt="Persibo Juara Liga Indonesia 2010">
+                    <p style="font-style: italic; margin-top: 10px;">Persibo Juara Liga Indonesia 2010</p>
+                </div>
+                <div class="about-image">
+                    <img src="liga3jatim.jpeg" alt="Pemain Persibo">
+                    <p style="font-style: italic; margin-top: 10px;">Persibo Bojonegoro Juara Liga 3 Jawa Timur 2023/2024</p>
+                </div>
+                <div class="about-video">
+                    <iframe src="https://www.youtube.com/embed/Ks2FWtHVtE4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p style="font-style: italic; margin-top: 10px;">ANTHEM PERSIBO BOJONEGORO "JAYALAH PERSIBOKU"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Persibo Bojonegoro. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com/persibojonegoro">Twitter</a>
+            <a href="https://www.facebook.com/PersiboBojonegoroOfficial/">Facebook</a>
+            <a href="https://www.instagram.com/persibo.bojonegoro/">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>

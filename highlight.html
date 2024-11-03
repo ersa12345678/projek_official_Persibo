@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlights - Persibo Bojonegoro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cursive&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #faf7f7;
+            background-image: url("momen2.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #f0c040;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            transition: background-color 0.3s;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        header .logo .club-name {
+            font-family: 'Cursive', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #f0c040;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        .highlight-section {
+            background-color: #ffa60093;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .highlight-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0a0a0a;
+        }
+
+        .highlight-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .highlight-item {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            margin-bottom: 20px;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .highlight-item iframe {
+            width: 100%;
+            height: 180px; /* Tinggi asli */
+            border: none;
+            transition: height 0.3s, width 0.3s; /* Transisi tambahan untuk lebar */
+        }
+
+        /* Atur tinggi iframe saat hover */
+        .highlight-item:hover iframe {
+            height: 240px; /* Tinggi yang lebih besar */
+            width: 110%; /* Lebar yang sedikit lebih besar */
+            margin-left: -5%; /* Penyesuaian untuk penempatan tengah */
+        }
+
+        .highlight-item p {
+            padding: 10px;
+            color: #090909;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #f0c040;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #c48807;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Club Logo">
+            <span class="club-name">Persibo Bojonegoro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">About</a></li>
+                <li><a href="tim.html">Team</a></li>
+                <li><a href="jadwal.html">Schedule</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="highlight.html">Highlights</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="highlight-section">
+            <h2>Highlight Pertandingan</h2>
+            <div class="highlight-content">
+                <div class="highlight-item">
+                    <iframe src="https://www.youtube.com/embed/3T7K1LaU4_8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Adhyaksa Farmel fc (3-2) Persibo Bojonegoro<br>Highlight Liga 3 Nasional 2023/2024</br></p>
+                </div>
+                <div class="highlight-item">
+                    <iframe src="https://www.youtube.com/embed/V8hUABQQeME" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Persibo Bojonegoro (1-0) Persiku Kudus<br>Highlight Liga 3 Nasional 2023/2024</br></p>
+                </div>
+                <div class="highlight-item">
+                    <iframe src="https://www.youtube.com/embed/W2m5isjUUYg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Tornado FC Pekanbaru (0-1) Persibo Bojonegoro<br>Highlight Liga 3 Nasional 2023/2024</br></p>
+                </div>
+                <div class="highlight-item">
+                    <iframe src="https://www.youtube.com/embed/sn_JSJV9RMs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Persibo Bojonegoro (0-0) Persikota Tangerang<br>Highlight Liga 3 Nasional 2023/2024</br></p>
+                </div>
+                <div class="highlight-item">
+                    <iframe src="https://www.youtube.com/embed/WhHqVX4IrYQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Persibo Bojonegoro (3-0) Psm Madiun<br>Highlight Liga 3 Nasional 2023/2024</br></p>
+                </div>
+                <div class="highlight-item">
+                    <iframe src="https://www.youtube.com/embed/cgfxBACKmps" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Waanal Brothers FC (1-2) Persibo Bojonegoro<br>Highlight Liga 3 Nasional 2023/2024</br></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Persibo Bojonegoro. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com/persibojonegoro">Twitter</a>
+            <a href="https://www.facebook.com/PersiboBojonegoroOfficial/">Facebook</a>
+            <a href="https://www.instagram.com/persibo.bojonegoro/">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Seputar Persibo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-image: url("uforia.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #c35705;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        header .logo .club-name {
+            font-family: 'Cursive', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #c35705;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .news-section {
+            background-color: #c35705bd;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .news-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #070707;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .article-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fefbfb;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33.333% - 40px);
+            margin: 10px;
+        }
+
+        .article-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .article-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .article-card p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #f0c040;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .article-card:hover img {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #c35705;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .article-card {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Club Logo">
+            <span class="club-name">Persibo Bojonegoro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">About</a></li>
+                <li><a href="tim.html">Team</a></li>
+                <li><a href="jadwal.html">Schedule</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="highlight.html">Highlight</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="news" class="news-section">
+            <h2>BERITA TERKINI!!!</h2>
+            <div class="articles">
+                <div class="article-card">
+                    <img src="news13.png" alt="News 1">
+                    <h3>GBT Calling….! 🔥</h3>
+                    <p>Untuk merayakan ulang tahun Persebaya ke-97, juga ulang tahun Kota Surabaya ke-731, Persebaya akan menyelenggarakan Anniversary Game pada Sabtu, 29 Juni 2024, kickoff pukul 19.00 WIB. <br>Lawannya adalah Persibo Bojonegoro yang baru saja memastikan diri lolos ke Liga 2.
+
+                        Ini akan menjadi penampilan perdana skuad baru Persebaya. Termasuk pemain-pemain yang saat ini belum diumumkan. Panpel Persebaya juga akan menyajikan show-show istimewa dalam pertandingan ini.</br></p>
+                </div>
+                <div class="article-card">
+                    <img src="news2.png" alt="News 2">
+                    <h3>Tegakkan Kepalamu Boo!!! Trabas Liga 2 Indonesia 🔥🔥🔥</h3>
+                    <p>KALIAN YANG TERBAIK BOOO 👊
+
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #persibobojonegoro #COAD
+                        #LaskarAnglingDharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news3.png" alt="News 3">
+                    <h3>SELESAI!!!</h3>
+                    <p>TERIMAKASIH PASUKAN LASKAR ANGLING DHARMA YANG SUDAH BERJUANG HABIS-HABISAN DI BABAK FINAL 🐉
+
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #persibobojonegoro #COAD
+                        #LaskarAnglingDharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news4.png" alt="News 4">
+                    <h3>IT'S FINAL DAY!</h3>
+                    <p><br>⚽ Adhyaksa Farmel FC vs Persibo Bojonegoro
+                        <br>🗓 Jumat, 07 Juni 2024
+                        <br>⏰ Kick off 14.00wib
+                        <br>🏟️ Stadion Mini Cibinong, KAB Bogor.</br>
+                        
+                        ------------------------------------------------------------------
+                        
+                        <br>🟠🟠</br>
+                        
+                        #AFFCPSBO #finalday #Persibo #persibobojonegoro #COAD #LaskarAnglingDharma #Sadabe #PKNBJN</p>
+                </div>
+                <div class="article-card">
+                    <img src="news5.png" alt="News 5">
+                    <h3>NAIK KASTA LUR!!!</h3>
+                    <p>Selamat pagi boloooo
+                        Moment Euphoria itu masih ada 🔥
+                        
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #persibobojonegoro #COAD
+                        #LaskarAnglingDharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news6.png" alt="News 6">
+                    <h3>KULO NUWUN...</h3>
+                    <p>8 BESAR KAMI DATANG🔥
+
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #persibobojonegoro #COAD
+                        #LaskarAnglingDharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news7.png" alt="News 7">
+                    <h3>𝗖𝗲𝗹𝗲𝗯𝗿𝗮𝘁𝗶𝗼𝗻 𝗺𝗼𝗺𝗲𝗻𝘁𝘀!</h3>
+                    <p><br>Terimakasih untuk seluruh supporter, fans dan masyarakat Bojonegoro atas support nya selama Liga. 3 Kapal Api Jawa Timur 2023/2024.</br>
+
+                        <br>Sampai jumpa di putaran Nasional.
+                        𝐃𝐈𝐆𝐃𝐀𝐘𝐀 𝐁𝐎𝐉𝐎𝐍𝐄𝐆𝐎𝐑𝐎! 🐉</br>
+                        
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #PersiboBojonegoro #COAD
+                        #laskaranglingdharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news8.png" alt="News 8">
+                    <h3>Langkah Terakhir di Jawa Timur!!!</h3>
+                    <p><br>Tiket pertandingan grand final Liga. 3 Kapal Api Jawa Timur 23/24 antara Persibo Bojonegoro vs Persedikab Kediri sudah bisa kalian dapatkan mulai dari sekarang.</br>
+
+                        <br>*note :
+                        Untuk SSB/Klub internal se-Bojonegoro, kalian bisa mendapatkan tiket gratis dengan total 1000 tiket untuk pertandingan besok.
+                        Syarat dan ketentuan baca di slide ke 3.</br>
+                        
+                        -------------------------------------------------------------------------------
+                        ⚽ PERSIBO Bojonegoro vs Persedikab Kediri
+                        🗓️ Selasa 6 februari 2024 | 16.00 wib
+                        🏟️ Stadion Letjen H. Soedirman, Bojonegoro
+                        -------------------------------------------------------------------------------</p>
+                </div>
+                <div class="article-card">
+                    <img src="news9.png" alt="News 9">
+                    <h3>Yok Semi Final🔥🔥🔥 </h3>
+                    <p>KAWAL TUNTAS SAMPAI JUARA!
+
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #persibobojonegoro #COAD
+                        #LaskarAnglingDharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news10.png" alt="News 10">
+                    <h3>𝗣𝗘𝗥𝗦𝗜𝗕𝗢 𝗕𝗢𝗝𝗢𝗡𝗘𝗚𝗢𝗥𝗢 𝗤𝗨𝗔𝗟𝗜𝗙𝗜𝗘𝗗 𝗧𝗢 𝗟𝗜𝗚𝗔. 𝟯 𝗡𝗔𝗧𝗜𝗢𝗡𝗔𝗟 𝗥𝗢𝗨𝗡𝗗!</h3>
+                    <p>G E T I H N O G O ! 🐉
+
+                        <br>🟠🟠</br>
+                        
+                        #Persibo #persibobojonegoro #COAD
+                        #LaskarAnglingDharma #Sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news11.png" alt="News 11">
+                    <h3>𝗧𝗢𝗗𝗔𝗬 𝗜𝗧𝗦 𝗠𝗔𝗧𝗖𝗛𝗗𝗔𝗬!</h3>
+                    <p><br>Pertandingan hari ini akan disiarkan secara langsung melalui kanal Youtube resmi Persibo Bojonegoro.
+                        Jangan lupa untuk subscribe dan aktifkan notifikasinya, frenn!</br>
+                        
+                        <br>Untuk yang tidak bisa hadir, beri dukungan terbaikmu melalu live stream youtube Persibo!. 🫡</br>
+                        
+                        <br>🟠🟠</br>
+                        
+                        #persibo #persibobojonegoro
+                        #laskaranglingdharma #sadabe</p>
+                </div>
+                <div class="article-card">
+                    <img src="news12.png" alt="News 12">
+                    <h3>Line Up Utama Persibo Bojonegoro</h3>
+                    <p>Hasil yang baik untuk laga perdana Liga. 3 Jawa Timur 2023/2024.
+                        Tidak berpuas diri, tim akan terus mengevaluasi kekurangan dan terus berproses menjadi jauh lebih baik.
+                        
+                        Terselip pesan untuk @tarikeljanaby, lekas kembali papa.
+                        See you in match against Madiun Putra frenn! ✊🏻
+                        
+                        <br>🟠🟠</br>
+                        
+                        #persibo #persibobojonegoro
+                        #laskaranglingdharma #sadabe</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Persibo Bojonegoro. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://x.com/persibojonegoro">Twitter</a>
+            <a href="https://www.facebook.com/PersiboBojonegoroOfficial/">Facebook</a>
+            <a href="https://www.instagram.com/persibo.bojonegoro/">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>
